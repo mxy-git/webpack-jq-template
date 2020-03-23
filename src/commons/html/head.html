@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<!-- 为了防止页面数字被识别为电话号码，可根据实际需要添加： -->
+<meta name="format-detection" content="telephone=no">
+<!-- 让添加到主屏幕的网页再次打开时全屏展示，可添加：   -->
+<meta content="yes" name="mobile-web-app-capable">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="robots" content="all">
+<meta name="Description" content="页面的描述内容" />
+<meta name="Keywords" content="页面关键字" />
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    var k = 750;
+    (function (win, doc) {
+        if (!win.addEventListener) return;
+        var html = document.documentElement;
+        if (doc.documentElement.currentStyle) {
+            var user_webset_font = doc.documentElement.currentStyle['fontSize'];
+        } else {
+            var user_webset_font = getComputedStyle(doc.documentElement, false)['fontSize'];
+        }
+        var xs = parseFloat(user_webset_font) / 16;
+
+        function setFont() {
+            var html = document.documentElement;
+            html.style.fontSize = html.clientWidth / k * 100 / xs + "px";
+        }
+        setFont();
+        setTimeout(function () {
+            setFont();
+        }, 300);
+        doc.addEventListener('DOMContentLoaded', setFont, false);
+        win.addEventListener('resize', setFont, false);
+        win.addEventListener('load', setFont, false);
+    })(window, document);
+</script>

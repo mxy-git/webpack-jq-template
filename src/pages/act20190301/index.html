@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   ${require("../../commons/html/head.html")}
+    <title>邀请好友</title>
+    <link rel="stylesheet" href="https://mytt-website.oss-cn-beijing.aliyuncs.com/swiper-4.4.2.min.css">
+    <script src="https://mytt-website.oss-cn-beijing.aliyuncs.com/swiper-4.4.2.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        ${require("./_m-swiper.html")}
+    </div>
+    <div class="footer">
+        ${require("./_f-swiper.html")}
+        <div class="but-box">
+            <a class="save-but" href="javascript:;">保存相册</a>
+            <a class="share-but" href="javascript:;">立即分享</a>
+        </div>
+    </div>
+</body>
+<script>
+    /**
+     * 神策初始化代码
+    */
+    // fTools.saConfigInit();
+    // sa.login();
+    // sa.quick('autoTrack')
+    // sa.track(‘search’,{searchKeyWord:$(‘#keyWord’).val()})
+
+    /**
+     * 页面上的俩个小按钮
+    */
+    $(".save-but").on("click",function(){
+        /**
+         * saveUrl为要保存海报的URL 只是获取img的src
+        */
+        console.log(saveUrl)
+        /**
+         * 神策
+        */
+        // sa.track(‘search’,{searchKeyWord:$(‘#keyWord’).val()})
+    })
+    $(".share-but").on("click",function(){
+        console.log("分享")
+        /**
+         * 神策
+        */
+        // sa.track(‘search’,{searchKeyWord:$(‘#keyWord’).val()})
+    })
+</script>
+
+</html>

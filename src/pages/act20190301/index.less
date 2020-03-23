@@ -1,0 +1,128 @@
+body {
+    background: rgba(250, 250, 250, 1);
+}
+
+.footer {
+    width: 100%;
+    height: 2.76rem;
+    background: rgba(255, 255, 255, 1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    box-sizing: border-box;
+    padding-top: .2rem;
+
+    .f-swiper-icons {
+        width: 100%;
+        // height: 1.11rem;
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            background-color: red;
+            position: relative;
+
+            .bg {
+                width: 100%;
+            }
+
+            .mask {
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: .44rem;
+                    height: .44rem;
+                }
+            }
+
+            &.cur {
+                .mask {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .but-box {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 .56rem;
+        margin-top: .39rem;
+
+        a {
+            display: block;
+            width: 2.92rem;
+            height: 0.67rem;
+            text-align: center;
+            font-size: 0.32rem;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            border-radius: 0.34rem;
+            line-height: .72rem;
+        }
+
+        .save-but {
+            background: rgba(255, 136, 0, 1);
+        }
+
+        .share-but {
+            background: rgba(254, 51, 49, 1);
+        }
+
+    }
+}
+
+.main {
+    box-sizing: border-box;
+    padding-top: .44rem;
+    position: relative;
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 .8rem;
+    }
+
+    .m-s-prev {
+        width: .34rem;
+        height: .62rem;
+        background-image: url("../../static/l.png");
+        background-size: 100% 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: .23rem;
+        z-index: 9;
+    }
+
+    .m-s-next {
+        width: .34rem;
+        height: .62rem;
+        background-image: url("../../static/r.png");
+        background-size: 100% 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: .23rem;
+        z-index: 9;
+    }
+}
