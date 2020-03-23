@@ -11,7 +11,7 @@ module.exports = {
             changeOrigin: true,
             pathRewrite: {
                 '^/api': '/'
-                //这里理解成用‘/api’代替target里面的地址，
+                //这里理解成用‘/api’代替target里面的地址， 
             }
         }
     }
