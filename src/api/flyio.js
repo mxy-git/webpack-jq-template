@@ -1,6 +1,6 @@
-// 浏览器和React Native
+// 错误提示
 // import { Toast } from "vant";
-// import Vue from "vue";
+// import Vue from "vue"; 
 import { getRequestParams } from "../../utils/tool";
 import config from "../../config/index";
 var baseParams = getRequestParams();
